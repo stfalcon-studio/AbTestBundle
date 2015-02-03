@@ -1,0 +1,23 @@
+{
+    "name": "stfalcon/abtest-bundle",
+    "type": "symfony-bundle",
+    "description": "Symfony AtfalconAbTestBundle",
+    "keywords": ["analytics", "ab test", "stfalcon", "google analytics"],
+    "homepage": "http://stfalcon.com",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexandr Lensky",
+            "email": "olexandr.lensky@stfalcon.com",
+            "homepage": "http://stfalcon.com"
+        }
+    ],
+    "require": {
+        "symfony/symfony": ">=2.1",
+        "sonata-project/admin-bundle": "~2.1",
+        "sonata-project/doctrine-orm-admin-bundle": "~2.2"
+    },
+    "autoload": {
+        "psr-4": { "Stfalcon\\AbTestBundle\\": "" }
+    }
+}

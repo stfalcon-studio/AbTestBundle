@@ -1,0 +1,15 @@
+services:
+    stfalcon_ab_test.admin.ab_test:
+        class: Stfalcon\AbTestBundle\Admin\AbTestAdmin
+        tags:
+            - { name: sonata.admin, manager_type: orm, group: "Google Analytics", label: "AB Tests" }
+        arguments:
+            - ~
+            - Stfalcon\AbTestBundle\Entity\AbTest
+            - ~
+    stfalcon_ab_test.twig_extension.ab_test_extension:
+        class: Stfalcon\AbTestBundle\Twig\AbTestExtension
+        tags:
+            - { name: twig.extension }
+        calls:
+            - [setContainer, [@service_container]]
